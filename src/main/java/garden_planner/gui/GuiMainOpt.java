@@ -1,5 +1,6 @@
 package garden_planner.gui;
 
+import garden_planner.model.GardenBed;
 import garden_planner.model.GardenPlanner;
 import garden_planner.model.RectBed;
 import javafx.application.Application;
@@ -43,7 +44,7 @@ public class GuiMainOpt extends Application {
 
         // Hook with a GardenPlanner instance
         // A default garden layout is created in the constructor
-        for (RectBed bed : planner.getBeds()) {
+        for (GardenBed bed : planner.getBeds()) {
             Rectangle rec = new Rectangle(bed.getWidth()*100, bed.getHeight()*100);
             rec.setX(bed.getLeft()*100);
             rec.setY(bed.getTop()*100);
